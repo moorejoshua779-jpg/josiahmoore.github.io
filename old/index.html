@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josiah Moore - Personal Website</title>
+    
+    <!-- External CSS Link (Required by Assignment Criteria) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Embedded Directly into HTML Page 1 -->
+    <style>
+        /* General Page Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            /* Vibrant Emerald Green Background Theme */
+            background-color: #054720;
+        }
+
+        /* Sticky Navigation Bar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 15px 0;
+            margin: 0;
+            background-color: #022b13;
+            text-align: center;
+            border-bottom: 3px solid #10b981;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #a7f3d0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        /* Hover Effect for Navigation Links */
+        nav a:hover {
+            color: #ffffff;
+            background-color: #059669;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Top Center Profile Header */
+        .hero {
+            background: linear-gradient(180deg, #022b13 0%, #054720 100%);
+            padding: 50px 0 30px 0;
+            text-align: center;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Profile Picture Styling */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #34d399;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+            background-color: #022b13;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6ee7b7;
+        }
+
+        /* Bio Sections */
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #046c30;
+        }
+
+        h2 {
+            color: #a7f3d0;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-left: 4px solid #34d399;
+            padding-left: 10px;
+        }
+
+        .bio-card {
+            background-color: #033618;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.6;
+        }
+
+        .bio-card p {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .bio-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #022b13;
+            text-align: center;
+            padding: 25px 0;
+            color: #6ee7b7;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <!-- Top Center Profile Picture Header -->
+                <div class="profile-header">
+                    <!-- 
+                       Profile Image set to "images/profile.jpg".
+                       Added onerror fallback so if the local file is missing/misnamed, 
+                       it displays a clean placeholder profile image automatically.
+                    -->
+                    <img src="profile.jpg" 
+                         alt="Josiah Moore Profile Picture" 
+                         class="profile-img"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/180/022b13/34d399?text=Josiah+Moore';">
+                    
+                    <h1>Josiah Moore</h1>
+                    <p class="subtitle">Information Technology Student &amp; Creator of ROUK</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="bio-card">
+                    <p>
+                        Hello! My name is <strong>Josiah Moore</strong>. I am an 18-year-old Information Technology 
+                        student currently living in Woodlands, St. George. I attended the <strong>Grenada Boys' Secondary School (GBSS)</strong>, 
+                        where I completed my 2025 CXC examinations, successfully passing 10 subjects.
+                    </p>
+                    <p>
+                        At first, I aspired to become a paleontologist due to my fascination with prehistoric life. 
+                        However, recognizing my financial situation, I decided to pursue Information Technology as an 
+                        effective pathway to build myself up, gain valuable technical skills, and ultimately work toward 
+                        attaining my dream job in the future.
+                    </p>
+                </div>
+
+                <div class="bio-card">
+                    <h2>Gaming &amp; Content Creation</h2>
+                    <p>
+                        Outside of my academic studies, my main hobby right now is building my gaming YouTube channel named 
+                        <strong>ROUK</strong>. I create and upload gameplay clips focused on titles like 
+                        <em>Dragon Ball Legends</em>, <em>Free Fire</em>, and <em>Call of Duty: Mobile</em>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josiah Moore | Developed for IT Coursework</p>
+        </div>
+    </footer>
+
+</body>
+</html>

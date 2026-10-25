@@ -1,0 +1,63 @@
+# Personal Website Redesign - Josiah Moore
+
+## 1. Project Overview & Author
+* **Author:** Josiah Moore
+* **Institution:** T.A. Marry show Community College (Information Technology Program)
+* **Description:** This project is an individual practical web development assignment featuring a fully redesigned, responsive personal and professional portfolio website. It highlights my academic qualifications, IT coursework, skills, and my gaming content creation channel, **ROUK**.
+
+## 2. Summary of Redesign
+* **Semantic Structure:** Upgraded the HTML structure by replacing non-semantic wrapper elements with appropriate HTML5 semantic tags (`<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>`) to improve accessibility and code maintainability.
+* **Responsive Web Design:** Implemented custom CSS media queries and flexible layout constraints to ensure the website scales smoothly across mobile, tablet, and desktop screen sizes.
+* **Version Control:** Developed entirely within a dedicated Git feature branch (`feature/personal-website-redesign`) and merged into the `main` branch via a structured Pull Request.
+## 3. Technologies Used
+* **HTML5:** Semantic markup, data tables, and embedded media elements.
+* **CSS3:** Flexbox layouts, custom styling, CSS variables/theme, and media queries.
+* **Git & GitHub:** Version control, branching, conventional commits, Pull Requests, and GitHub Pages hosting.
+
+## 4. Directory Structure
+personal-website/
+├── index.html
+├── portfolio.html
+├── README.md
+├── css/
+│   └── style.css
+└── images/
+    ├── profile.jpg
+    └── project-image.png
+
+## 5. Instructions for Viewing
+1. Clone or download the repository to your local machine.
+2. Ensure the directory structure matches the layout outlined above (with `style.css` inside the `css/` folder and your profile image inside the `images/` folder).
+3. Open `index.html` or `portfolio.html` in any modern web browser (Google Chrome, Firefox, Microsoft Edge, or Safari).
+4. Alternatively, view the live hosted version online via the GitHub Pages URL.
+
+## 6. Responsive Design Approach
+The responsive design utilizes relative sizing (`max-width`, percentages) combined with CSS media queries targeting screens under 768px (tablets) and 480px (mobile phones). This ensures that container paddings shrink gracefully, tables become horizontally scrollable without breaking the viewport, typography scales appropriately, and navigation links stack cleanly on small mobile displays.
+
+## 7. Image Source Credits
+* **Profile Image:** Locally stored personal photograph (`images/profile.jpg`), provided with fallback placeholder support.
+* **External Assets:** Standard web fonts and styling icons utilizing modern css properties
+
+## 8. Development Reflection
+Redesigning my personal website was an invaluable practical exercise that significantly enhanced my web development and version control skills. Throughout this project, I focused on replacing generic markup with semantic HTML5 elements like `<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>` to improve accessibility and code clarity. One of the main challenges I encountered was ensuring that complex components like qualification tables and navigation links adapted gracefully across various screen sizes. To solve this, I implemented custom CSS media queries and flexible layout containers, successfully optimizing the user experience for mobile, tablet, and desktop viewports without unwanted horizontal scrolling. Furthermore, adopting a professional Git workflow by developing on a dedicated feature branch (`feature/personal-website-redesign`) rather than committing directly to `main` taught me the importance of disciplined version control. Creating incremental, descriptive commits and opening a Pull Request (PR) allowed me to review changes systematically before merging them safely. This assignment not only refined my technical proficiency in HTML5 and CSS3 but also instilled professional software engineering habits that I will apply to future IT coursework and collaborative development projects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

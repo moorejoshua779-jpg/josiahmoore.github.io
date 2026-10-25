@@ -1,0 +1,229 @@
+/* General Page Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    /* Main Green Background */
+    background-color: #054720;
+}
+
+/* Header & Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 15px 0;
+    margin: 0;
+    background-color: #022b13;
+    text-align: center;
+    border-bottom: 3px solid #10b981;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a7f3d0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Hover effect requirement */
+nav a:hover {
+    color: #ffffff;
+    background-color: #059669;
+}
+
+/* Layout Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Top Center Profile Picture & Hero Header */
+.hero {
+    background: linear-gradient(180deg, #022b13 0%, #054720 100%);
+    padding: 50px 0 30px 0;
+    text-align: center;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #34d399;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6ee7b7;
+}
+
+/* Content Sections */
+.section {
+    padding: 40px 0;
+    border-bottom: 1px solid #046c30;
+}
+
+h2 {
+    color: #a7f3d0;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-left: 4px solid #34d399;
+    padding-left: 10px;
+}
+
+.bio-card {
+    background-color: #033618;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+.bio-card p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.bio-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Table Styling */
+.table-container {
+    margin: 25px 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #033618;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #055e2a;
+}
+
+th {
+    background-color: #022b13;
+    color: #a7f3d0;
+    font-size: 1.05rem;
+}
+
+tr:nth-child(even) {
+    background-color: #04421e;
+}
+
+/* Video Showcase Area */
+.media-showcase {
+    margin-top: 40px;
+    background-color: #033618;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 2px solid #34d399;
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #055e2a;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #022b13;
+    color: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #34d399;
+}
+
+.btn {
+    padding: 12px;
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #059669;
+}
+
+/* Footer */
+footer {
+    background-color: #022b13;
+    text-align: center;
+    padding: 25px 0;
+    color: #6ee7b7;
+    font-size: 0.95rem;
+}
