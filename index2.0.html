@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josiah Moore - Personal Website</title>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar with Hover Animations -->
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html#home" class="nav-link active">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="portfolio.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Hero Header Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="profile-header">
+                    <!-- Local Image with Fallback Placeholder -->
+                    <img src="profile.jpg" 
+                         alt="Josiah Moore Profile Picture" 
+                         class="profile-img"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/180/022b13/34d399?text=Josiah+Moore';">
+                    
+                    <h1 class="hero-title">Josiah Moore</h1>
+                    <p class="subtitle">Information Technology Student &amp; Creator of ROUK</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <!-- Heading with Hover Animation -->
+                <h2 class="animated-heading">About Me</h2>
+                
+                <div class="bio-card">
+                    <p>
+                        Hello! My name is <strong>Josiah Moore</strong>. I am an 18-year-old Information Technology 
+                        student currently living in Woodlands, St. George. I attended the <strong>Grenada Boys' Secondary School (GBSS)</strong>, 
+                        where I completed my 2025 CXC examinations, successfully passing 10 subjects.
+                    </p>
+                    <p>
+                        At first, I aspired to become a paleontologist due to my fascination with prehistoric life. 
+                        However, recognizing my financial situation, I decided to pursue Information Technology as an 
+                        effective pathway to build myself up, gain valuable technical skills, and ultimately work toward 
+                        attaining my dream job in the future.
+                    </p>
+                </div>
+
+                <!-- Section Heading with Hover Animation -->
+                <h2 class="animated-heading">Gaming &amp; Content Creation</h2>
+                
+                <div class="bio-card">
+                    <p>
+                        Outside of my academic studies, my main hobby right now is building my gaming YouTube channel named 
+                        <strong>ROUK</strong>. I create and upload gameplay clips focused on titles like 
+                        <em>Dragon Ball Legends</em>, <em>Free Fire</em>, and <em>Call of Duty: Mobile</em>.
+                    </p>
+                </div>
+
+                <!-- Externally Hosted Image Requirement -->
+                <div class="external-image-card">
+                    <h2 class="animated-heading">Featured Online Image</h2>
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" 
+                             alt="Modern Technology and IT Setup" 
+                             class="online-img">
+                        <figcaption>Source: Unsplash (Free Creative Tech Asset)</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josiah Moore | Developed for IT Coursework</p>
+        </div>
+    </footer>
+
+</body>
+</html>
