@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Sticky Navigation Bar with Hover Animations -->
+    <!-- Sticky Navigation Bar with Theme Toggle -->
     <header>
         <nav aria-label="Main navigation">
             <ul>
@@ -19,6 +19,8 @@
                 <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
                 <li><a href="portfolio.html#contact" class="nav-link">Contact</a></li>
             </ul>
+            <!-- Feature 1: Dark / Light Mode Toggle Button -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙 Dark Mode</button>
         </nav>
     </header>
 
@@ -51,7 +53,7 @@
                             </tr>
                             <tr>
                                 <td>Web Development</td>
-                                <td>HTML5, CSS3, VS Code</td>
+                                <td>HTML5, CSS3, JavaScript</td>
                                 <td>Intermediate</td>
                             </tr>
                             <tr>
@@ -73,20 +75,21 @@
                     </table>
                 </div>
 
-                <!-- ROUK Gaming Video Showcase -->
                 <!-- ROUK Gaming YouTube Short Showcase -->
-<div class="media-showcase">
-    <h2 class="animated-heading">ROUK Gaming Showcase</h2>
-    <p class="section-intro">Watch a clip from my gaming channel highlighting gameplay in Free Fire on max graphics:</p>
+                <div class="media-showcase">
+                    <h2 class="animated-heading">ROUK Gaming Showcase</h2>
+                    <p class="section-intro">Watch a clip from my gaming channel highlighting gameplay in Free Fire on max graphics:</p>
 
-    <div class="shorts-container">
-        <iframe src="https://www.youtube.com/embed/5rbioNtSv7k" 
-                title="Ao7 on max graphics ff.#freefire #shorts" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-        </iframe>
-    </div>
-</div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/5rbioNtSv7k" 
+                                title="Ao7 on max graphics ff.#freefire #shorts" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section">
@@ -107,7 +110,9 @@
 
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <!-- Feature 4: Textarea with real-time character counter -->
+                        <textarea id="message" name="message" rows="5" maxlength="250" placeholder="Your Message (Max 250 characters)" required></textarea>
+                        <div id="char-counter" class="char-counter">250 characters remaining</div>
                     </div>
 
                     <button type="submit" class="btn">Send Message</button>
@@ -122,6 +127,12 @@
             <p>&copy; 2026 Josiah Moore | ROUK Gaming</p>
         </div>
     </footer>
+
+    <!-- Feature 5: Back-to-Top Floating Button -->
+    <button id="back-to-top-btn" class="back-to-top" title="Go to top">↑</button>
+
+    <!-- External JavaScript File -->
+    <script src="script.js" defer></script>
 
 </body>
 </html>
