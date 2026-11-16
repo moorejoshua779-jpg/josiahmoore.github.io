@@ -40,7 +40,34 @@ The responsive design utilizes relative sizing (`max-width`, percentages) combin
 
 ## 8. Development Reflection
 Redesigning my personal website was an invaluable practical exercise that significantly enhanced my web development and version control skills. Throughout this project, I focused on replacing generic markup with semantic HTML5 elements like `<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>` to improve accessibility and code clarity. One of the main challenges I encountered was ensuring that complex components like qualification tables and navigation links adapted gracefully across various screen sizes. To solve this, I implemented custom CSS media queries and flexible layout containers, successfully optimizing the user experience for mobile, tablet, and desktop viewports without unwanted horizontal scrolling. Furthermore, adopting a professional Git workflow by developing on a dedicated feature branch (`feature/personal-website-redesign`) rather than committing directly to `main` taught me the importance of disciplined version control. Creating incremental, descriptive commits and opening a Pull Request (PR) allowed me to review changes systematically before merging them safely. This assignment not only refined my technical proficiency in HTML5 and CSS3 but also instilled professional software engineering habits that I will apply to future IT coursework and collaborative development projects.
+# Josiah Moore - Personal Website & Portfolio
 
+Welcome to the official repository for my personal website and portfolio. This project was developed as part of my Information Technology coursework to showcase my academic background, technical skills, content creation projects, and professional goals.
+
+## 🚀 Project Overview & Features
+The website has been enhanced with five interactive JavaScript features to improve user experience and demonstrate front-end programming capabilities:
+1. **Dark / Light Mode Toggle:** Allows users to switch color themes dynamically with preference persistence via `localStorage`.
+2. **Dynamic Time-Based Welcome Message:** Automatically detects the visitor's local system time to display a personalized greeting.
+3. **Interactive FAQ Accordion:** Uses DOM manipulation and smooth height transitions to expand and collapse frequently asked questions.
+4. **Real-time Character Counter:** Tracks input events on the contact form text area to dynamically show remaining character capacity.
+5. **Back-to-Top Floating Button:** Appears on window scroll and smoothly scrolls the user back to the top of the page.
+
+## 🛠️ Technologies Used
+* **HTML5** for semantic document structure and layout.
+* **CSS3** for styling, responsive design, custom properties, and light/dark mode themes.
+* **JavaScript (ES6+)** for DOM manipulation, event handling, and interactivity.
+* **Git & GitHub** for version control, branching workflows, and hosting via GitHub Pages.
+
+## 📁 Repository Directory Structure
+```text
+josiahmoore.github.io/
+├── index.html         # Main home and about page
+├── portfolio.html     # Portfolio, qualifications, and contact form
+├── style.css          # Global stylesheet and theme styles
+├── profile.jpg        # Profile image asset
+├── js/
+│   └── script.js      # External JavaScript file containing all feature logic
+└── README.md          # Project documentation and personal reflection
 
 
 
