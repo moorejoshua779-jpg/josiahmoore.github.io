@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Sticky Navigation Bar  with Hover Animations -->
+    <!-- Sticky Navigation Bar with Theme Toggle -->
     <header>
         <nav aria-label="Main navigation">
             <ul>
@@ -19,6 +19,8 @@
                 <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                 <li><a href="portfolio.html#contact" class="nav-link">Contact</a></li>
             </ul>
+            <!-- Feature 1: Dark / Light Mode Toggle Button -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙 Dark Mode</button>
         </nav>
     </header>
 
@@ -27,7 +29,6 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="profile-header">
-                    <!-- Local Image with Fallback Placeholder -->
                     <img src="profile.jpg" 
                          alt="Josiah Moore Profile Picture" 
                          class="profile-img"
@@ -35,6 +36,9 @@
                     
                     <h1 class="hero-title">Josiah Moore</h1>
                     <p class="subtitle">Information Technology Student &amp; Creator of ROUK</p>
+                    
+                    <!-- Feature 2: Time-Based Welcome Greeting -->
+                    <div id="welcome-message" class="welcome-banner"></div>
                 </div>
             </div>
         </section>
@@ -42,7 +46,6 @@
         <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
-                <!-- Heading with Hover Animation -->
                 <h2 class="animated-heading">About Me</h2>
                 
                 <div class="bio-card">
@@ -59,7 +62,6 @@
                     </p>
                 </div>
 
-                <!-- Section Heading with Hover Animation -->
                 <h2 class="animated-heading">Gaming &amp; Content Creation</h2>
                 
                 <div class="bio-card">
@@ -70,8 +72,24 @@
                     </p>
                 </div>
 
-                <!-- Externally Hosted Image Requirement -->
-                <div class="external-image-card">
+                <!-- Feature 3: Interactive FAQ Accordion Section -->
+                <h2 class="animated-heading">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What is ROUK?</button>
+                        <div class="faq-answer">
+                            <p>ROUK is my gaming YouTube channel and online brand where I publish short-form gameplay clips, summon showcases, and strategy guides for mobile games like Dragon Ball Legends and Call of Duty: Mobile.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What IT topics do I study at TAMCC?</button>
+                        <div class="faq-answer">
+                            <p>My coursework covers algorithms, data structures, C++, Java, web development with HTML5, CSS3, and JavaScript, networking, and database management systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="external-image-card" style="margin-top: 30px;">
                     <h2 class="animated-heading">Featured Online Image</h2>
                     <figure>
                         <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" 
@@ -90,6 +108,13 @@
             <p>&copy; 2026 Josiah Moore | Developed for IT Coursework</p>
         </div>
     </footer>
+
+    <!-- Feature 5: Back-to-Top Floating Button -->
+    <button id="back-to-top-btn" class="back-to-top" title="Go to top">↑</button>
+
+    <!-- External JavaScript File -->
+    <script src="script.js" defer></script>
+    
 
 </body>
 </html>
