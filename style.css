@@ -18,6 +18,56 @@ html {
 body {
     background-color: #032b13;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   Dark Mode Theme Overrides (JavaScript Feature 1)
+   ========================================== */
+body.light-mode {
+    background-color: #f0fdf4;
+    color: #0f172a;
+}
+
+body.light-mode header nav ul {
+    background-color: #ffffff;
+    border-bottom: 3px solid #10b981;
+}
+
+body.light-mode nav a.nav-link {
+    color: #047857;
+}
+
+body.light-mode nav a.nav-link:hover {
+    color: #ffffff;
+    background-color: #059669;
+}
+
+body.light-mode .bio-card, 
+body.light-mode .external-image-card, 
+body.light-mode table, 
+body.light-mode .media-showcase, 
+body.light-mode .contact-form {
+    background-color: #ffffff;
+    border-color: #d1fae5;
+    color: #0f172a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode th {
+    background-color: #f0fdf4;
+    color: #047857;
+}
+
+body.light-mode tr:nth-child(even) {
+    background-color: #f7fee7;
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+    background-color: #f9fafb;
+    color: #0f172a;
+    border-color: #d1d5db;
 }
 
 /* ==========================================
@@ -31,20 +81,23 @@ header {
 
 nav ul {
     list-style-type: none;
-    padding: 16px 0;
+    padding: 16px 20px;
     margin: 0;
     background-color: #011d0c;
     text-align: center;
     border-bottom: 3px solid #10b981;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 nav li {
     display: inline-block;
-    margin: 0 12px;
 }
 
-/* Navigation Links with Underline Expand & Glow Hover Animation */
 nav a.nav-link {
     position: relative;
     text-decoration: none;
@@ -57,7 +110,6 @@ nav a.nav-link {
     display: inline-block;
 }
 
-/* Animated Underline Effect */
 nav a.nav-link::after {
     content: '';
     position: absolute;
@@ -71,7 +123,6 @@ nav a.nav-link::after {
     border-radius: 2px;
 }
 
-/* Navigation Link Hover State */
 nav a.nav-link:hover {
     color: #ffffff;
     background-color: #045a27;
@@ -83,10 +134,28 @@ nav a.nav-link:hover::after {
     width: 80%;
 }
 
-/* Active Link State */
 nav a.nav-link.active {
     background-color: #045a27;
     color: #ffffff;
+}
+
+/* Theme Toggle Button in Nav */
+.theme-btn {
+    background-color: #045a27;
+    color: #a7f3d0;
+    border: 1px solid #34d399;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.theme-btn:hover {
+    background-color: #34d399;
+    color: #011d0c;
 }
 
 /* ==========================================
@@ -111,7 +180,6 @@ nav a.nav-link.active {
     justify-content: center;
 }
 
-/* Profile Picture with Pulse Border Hover Effect */
 .profile-img {
     width: 175px;
     height: 175px;
@@ -132,7 +200,7 @@ nav a.nav-link.active {
     font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 8px;
-    letter-weight: 700;
+    font-weight: 700;
 }
 
 .subtitle {
@@ -140,8 +208,16 @@ nav a.nav-link.active {
     color: #6ee7b7;
 }
 
+/* Dynamic Welcome Banner Styling */
+.welcome-banner {
+    margin-top: 15px;
+    font-size: 1.15rem;
+    color: #6ee7b7;
+    font-weight: 600;
+}
+
 /* ==========================================
-   Section Headings with Interactive Hover Animations
+   Section Headings & Cards
    ========================================== */
 .section {
     padding: 35px 0;
@@ -154,7 +230,6 @@ nav a.nav-link.active {
     color: #d1fae5;
 }
 
-/* Animated Headings (About Me, Gaming, Skills, Contact) */
 h2.animated-heading {
     display: inline-block;
     color: #a7f3d0;
@@ -166,7 +241,6 @@ h2.animated-heading {
     transition: all 0.35s ease;
 }
 
-/* Heading Hover State: Glow, Slide Right & Color Shift */
 h2.animated-heading:hover {
     color: #ffffff;
     padding-left: 20px;
@@ -175,22 +249,17 @@ h2.animated-heading:hover {
     text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
 }
 
-/* ==========================================
-   Bio Cards with Dark Green Mixed Border & Hover Lift
-   ========================================== */
 .bio-card, .external-image-card {
     background-color: #023818;
     padding: 24px;
     border-radius: 8px;
     margin-bottom: 25px;
-    /* Dark green mixed border setup */
     border: 2px solid #045d27;
     border-left: 5px solid #10b981;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-/* Bio Card Hover Effect */
 .bio-card:hover, .external-image-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
@@ -202,34 +271,74 @@ h2.animated-heading:hover {
     font-size: 1.05rem;
 }
 
-.bio-card p:last-child {
-    margin-bottom: 0;
+/* ==========================================
+   Interactive FAQ Accordion (JavaScript Feature 3)
+   ========================================== */
+.faq-container {
+    margin-top: 20px;
 }
 
-/* Online Image Styling */
-.online-img {
-    width: 100%;
-    max-height: 380px;
-    object-fit: cover;
-    border-radius: 6px;
+.faq-item {
+    background-color: #023818;
     border: 2px solid #045d27;
-    margin-top: 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #10b981;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #011d0c;
+    color: #a7f3d0;
+    padding: 14px 18px;
+    text-align: left;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.3rem;
+    font-weight: bold;
     transition: transform 0.3s ease;
 }
 
-.online-img:hover {
-    transform: scale(1.01);
+.faq-question.active::after {
+    content: '-';
 }
 
-figcaption {
-    font-size: 0.85rem;
-    color: #a7f3d0;
-    margin-top: 6px;
-    font-style: italic;
+.faq-question:hover {
+    background-color: #045a27;
+    color: #ffffff;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+    background-color: #023818;
+    padding: 0 18px;
+}
+
+.faq-answer p {
+    padding: 14px 0;
+    color: #d1fae5;
+    margin: 0;
 }
 
 /* ==========================================
-   Table Styling & Row Hover Animation
+   Tables & Media
    ========================================== */
 .table-container {
     margin: 25px 0;
@@ -262,9 +371,8 @@ tr:nth-child(even) {
     background-color: #032d13;
 }
 
-/* Table Row Hover State */
 tbody tr {
-    transition: background-color 0.25s ease, transform 0.25s ease;
+    transition: background-color 0.25s ease;
 }
 
 tbody tr:hover {
@@ -272,9 +380,6 @@ tbody tr:hover {
     cursor: pointer;
 }
 
-/* ==========================================
-   Video Showcase Area
-   ========================================== */
 .media-showcase {
     margin-top: 35px;
     background-color: #023818;
@@ -282,12 +387,6 @@ tbody tr:hover {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     border: 2px solid #045d27;
-}
-
-.video-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
 }
 
 iframe, video {
@@ -298,7 +397,7 @@ iframe, video {
 }
 
 /* ==========================================
-   Contact Form & Interactive Button
+   Contact Form & Character Counter
    ========================================== */
 .contact-form {
     display: flex;
@@ -342,6 +441,14 @@ iframe, video {
     box-shadow: 0 0 10px rgba(52, 211, 153, 0.4);
 }
 
+/* Character Counter Styling */
+.char-counter {
+    font-size: 0.85rem;
+    color: #a7f3d0;
+    text-align: right;
+    margin-top: 4px;
+}
+
 .btn {
     padding: 14px;
     background-color: #10b981;
@@ -354,7 +461,6 @@ iframe, video {
     transition: all 0.35s ease;
 }
 
-/* Submit Button Hover Animation */
 .btn:hover {
     background-color: #059669;
     transform: translateY(-2px);
@@ -362,7 +468,35 @@ iframe, video {
 }
 
 /* ==========================================
-   Footer
+   Back-to-Top Floating Button (Feature 5)
+   ========================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #059669;
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   Footer & Media Queries
    ========================================== */
 footer {
     background-color: #011d0c;
@@ -373,67 +507,29 @@ footer {
     border-top: 1px solid #044b20;
 }
 
-/* ==========================================
-   Responsive Design & Media Queries
-   ========================================== */
-
-/* Tablet Screens (Max-width: 768px) */
 @media (max-width: 768px) {
     .container {
         padding: 20px 15px;
     }
-
     .hero-title {
         font-size: 2.1rem;
     }
-
     h2.animated-heading {
         font-size: 1.55rem;
     }
-
-    nav li {
-        margin: 0 6px;
-    }
-
-    nav a.nav-link {
-        font-size: 1rem;
-        padding: 6px 12px;
-    }
 }
 
-/* Mobile Screens (Max-width: 480px) */
 @media (max-width: 480px) {
     nav ul {
-        display: flex;
         flex-direction: column;
         gap: 6px;
         padding: 12px 0;
     }
-
-    nav li {
-        display: block;
-        margin: 0;
-    }
-
     .profile-img {
         width: 140px;
         height: 140px;
     }
-
     .hero-title {
         font-size: 1.75rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    th, td {
-        padding: 10px 12px;
-        font-size: 0.88rem;
-    }
-
-    .bio-card, .contact-form {
-        padding: 18px;
     }
 }
